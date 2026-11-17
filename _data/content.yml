@@ -1,66 +1,73 @@
-site:
-  title: "Andrei Vidican — Software Engineer"
-  description: "Software engineer with 11+ years of commercial experience across Angular web applications, JAMstack architectures, and mobile development."
-  url: "https://andreividican.com"
-  og_image: "img/andreividican-facebook.webp"
-  ga_id: "G-GT0YC6HW7Y"
-  copyright: "© 2026 Andrei Vidican"
-
 profile:
-  name: "Andrei Vidican"
-  avatar: "img/favicon.png"
-  job_title: "Web Engineer III"
-  company: "Tide Business Banking"
-  bio: "Software engineer with over a decade of commercial experience spanning Angular web applications, JAMstack architectures, and cross-platform mobile development. Currently engineering features within the insurance team at Tide using Flutter."
-  linkedin_url: "https://www.linkedin.com/in/andreividican"
-
+  name: Andrei Vidican
+  job_title: Web Engineer III
+  company: Tide Business Banking
+  avatar: img/favicon.png
+  bio: Software engineer with over a decade of commercial experience spanning
+    Angular web applications, JAMstack architectures, and cross-platform mobile
+    development. Currently engineering features within the insurance team at
+    Tide using Flutter.
+  linkedin_url: https://www.linkedin.com/in/andreividican
 stack:
-  - "Flutter & Dart"
-  - "TypeScript"
-  - "JavaScript"
-  - "Angular"
-  - "PHP"
-  - "HTML & CSS"
-  - "GraphQL"
-  - "Contentful"
-  - "Jest.js"
-  - "Git"
-  - "DataDog"
-  - "LaunchDarkly"
-
+  - Flutter & Dart
+  - TypeScript
+  - JavaScript
+  - Angular
+  - PHP
+  - HTML & CSS
+  - GraphQL
+  - Contentful
+  - Jest.js
+  - Git
+  - LaunchDarkly
+  - DataDog
 experience:
-  - company: "Tide Business Banking"
-    period: "Jul 2019 — Present"
+  - company: Tide Business Banking
+    period: Jul 2019 — Present
     progression:
-      - title: "Web Engineer III"
-        date: "Feb 2024 — Present"
-      - title: "Web Engineer II"
-        date: "Sep 2021 — Feb 2024"
-      - title: "Web Developer"
-        date: "Jul 2019 — Sep 2021"
-    summary: "Currently engineering features across web and mobile within the insurance team at Tide using Flutter and Angular, following a title transition reflecting expanded cross-platform ownership. Previously promoted to Web Engineer II after migrating the marketing website from a LAMP stack to a JAMstack architecture using Contentful alongside another engineer."
-  - company: "Investoo Group"
-    period: "Aug 2018 — Jul 2019"
-    title: "Front-End Developer · London"
-    summary: "Primarily worked on in-house plugins for WordPress websites, built custom WordPress themes, and actively participated in the recruitment process."
-  - company: "Contra Agency"
-    period: "Oct 2015 — Aug 2018"
-    title: "Front-End Developer · London"
-    summary: "Built custom WordPress and Drupal themes from scratch according to design specifications in a fast-paced agency environment, utilizing jQuery, SCSS, and Git."
-
+      - title: Web Engineer III
+        date: Feb 2024 — Present
+      - title: Web Engineer II
+        date: Sep 2021 — Feb 2024
+      - title: Web Developer
+        date: Jul 2019 — Sep 2021
+    summary: Currently engineering features across web and mobile within the
+      insurance team at Tide using Flutter and Angular, following a title
+      transition reflecting expanded cross-platform ownership. Previously
+      promoted to Web Engineer II after migrating the marketing website from a
+      LAMP stack to a JAMstack architecture using Contentful alongside another
+      engineer.
+  - company: Investoo Group
+    period: Aug 2018 — Jul 2019
+    title: Front-End Developer · London
+    summary: Primarily worked on in-house plugins for WordPress websites, built
+      custom WordPress themes, and actively participated in the recruitment
+      process.
+  - company: Contra Agency
+    period: Oct 2015 — Aug 2018
+    title: Front-End Developer · London
+    summary: Built custom WordPress and Drupal themes from scratch according to
+      design specifications in a fast-paced agency environment, utilizing
+      jQuery, SCSS, and Git.
 interests:
-  summary: "Passionate about sim racing, playing drums, hiking, and road cycling."
-
+  summary: Passionate about sim racing, playing drums, hiking, and road cycling.
 education:
-  - institution: "Phoenix Institute"
-    program: "Web Development & Design"
-    period: "2013 – 2014"
-  - institution: "Babeș-Bolyai University"
-    program: "Tourism Geography"
-    period: "2009 – 2012"
-
+  - institution: Phoenix Institute
+    program: Web Development & Design
+    period: 2013 – 2014
+  - institution: Babeș-Bolyai University
+    program: Tourism Geography
+    period: 2009 – 2012
 languages:
-  - language: "English"
-    proficiency: "Full Professional Proficiency"
-  - language: "Romanian"
-    proficiency: "Native / Bilingual"
+  - language: English
+    proficiency: Full Professional Proficiency
+  - language: Romanian
+    proficiency: Native / Bilingual
+site:
+  title: Andrei Vidican — Software Engineer
+  description: Software engineer with 11+ years of commercial experience across
+    Angular web applications, JAMstack architectures, and mobile development.
+  url: https://andreividican.com
+  og_image: img/andreividican-facebook.webp
+  ga_id: G-GT0YC6HW7Y
+  copyright: © 2026 Andrei Vidican
