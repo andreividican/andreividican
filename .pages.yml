@@ -5,15 +5,15 @@ media:
     output: img
 
 content:
-  - name: content
-    label: Andrei Vidican Website Content
-    type: file
-    path: _data/content.yml
-    format: yaml
-    fields:
+  - name: portfolio
+    label: Portfolio
+    type: group
+    content:
       - name: profile
         label: Profile & Hero
-        type: object
+        type: file
+        path: _data/profile.yml
+        format: yaml
         fields:
           - name: name
             label: Full Name
@@ -34,17 +34,12 @@ content:
             label: LinkedIn URL
             type: string
 
-      - name: stack
-        label: Core Stack & Tools
-        type: string
-        list: true
-
       - name: experience
         label: Experience
-        type: object
-        list:
-          collapsible:
-            summary: "{company} ({period})"
+        type: file
+        path: _data/experience.yml
+        format: yaml
+        list: true
         fields:
           - name: company
             label: Company Name
@@ -53,10 +48,10 @@ content:
             label: Period (e.g. Jul 2019 — Present)
             type: string
           - name: title
-            label: Single Title (if no internal progression)
+            label: Single Title (if no progression)
             type: string
           - name: progression
-            label: Internal Progression (optional)
+            label: Role Progression (optional)
             type: object
             list:
               collapsible:
@@ -72,48 +67,61 @@ content:
             label: Summary Description
             type: text
 
-      - name: interests
-        label: Interests
-        type: object
+      - name: stack
+        label: Core Stack & Tools
+        type: file
+        path: _data/stack.yml
+        format: yaml
         fields:
-          - name: summary
-            label: Summary
-            type: text
+          - name: skills
+            label: Skills & Technologies
+            type: string
+            list: true
 
       - name: education
-        label: Education
-        type: object
-        list:
-          collapsible:
-            summary: "{institution} ({period})"
+        label: Education & Interests
+        type: file
+        path: _data/education.yml
+        format: yaml
         fields:
-          - name: institution
-            label: School / University
-            type: string
-          - name: program
-            label: Degree / Program
-            type: string
-          - name: period
-            label: Years
-            type: string
+          - name: schools
+            label: Education
+            type: object
+            list:
+              collapsible:
+                summary: "{institution} ({period})"
+            fields:
+              - name: institution
+                label: School / University
+                type: string
+              - name: program
+                label: Degree / Program
+                type: string
+              - name: period
+                label: Years
+                type: string
+          - name: languages
+            label: Languages
+            type: object
+            list:
+              collapsible:
+                summary: "{language} ({proficiency})"
+            fields:
+              - name: language
+                label: Language
+                type: string
+              - name: proficiency
+                label: Proficiency Level
+                type: string
+          - name: interests
+            label: Interests Summary
+            type: text
 
-      - name: languages
-        label: Languages
-        type: object
-        list:
-          collapsible:
-            summary: "{language} ({proficiency})"
-        fields:
-          - name: language
-            label: Language
-            type: string
-          - name: proficiency
-            label: Proficiency Level
-            type: string
-
-      - name: site
-        label: SEO & Analytics
-        type: object
+      - name: settings
+        label: SEO & Settings
+        type: file
+        path: _data/settings.yml
+        format: yaml
         fields:
           - name: title
             label: Meta Title

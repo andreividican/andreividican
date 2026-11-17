@@ -1,33 +1,23 @@
 ---
 ---
-
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ site.data.content.site.title }}</title>
-    <meta
-      name="description"
-      content="{{ site.data.content.site.description }}"
-    />
+    <title>{{ site.data.settings.title }}</title>
+    <meta name="description" content="{{ site.data.settings.description }}" />
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
 
     <meta property="og:type" content="profile" />
-    <meta property="og:title" content="{{ site.data.content.site.title }}" />
-    <meta
-      property="og:description"
-      content="{{ site.data.content.site.description }}"
-    />
-    <meta property="og:url" content="{{ site.data.content.site.url }}" />
-    <meta property="og:image" content="{{ site.data.content.site.og_image }}" />
+    <meta property="og:title" content="{{ site.data.settings.title }}" />
+    <meta property="og:description" content="{{ site.data.settings.description }}" />
+    <meta property="og:url" content="{{ site.data.settings.url }}" />
+    <meta property="og:image" content="{{ site.data.settings.og_image }}" />
 
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="{{ site.data.content.site.title }}" />
-    <meta
-      name="twitter:description"
-      content="{{ site.data.content.profile.job_title }} at {{ site.data.content.profile.company }}."
-    />
+    <meta name="twitter:title" content="{{ site.data.settings.title }}" />
+    <meta name="twitter:description" content="{{ site.data.profile.job_title }} at {{ site.data.profile.company }}." />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,43 +28,42 @@
     <link rel="stylesheet" href="style.css" />
 
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "{{ site.data.content.profile.name }}",
-        "jobTitle": "{{ site.data.content.profile.job_title }}",
-        "worksFor": {
-          "@type": "Organization",
-          "name": "{{ site.data.content.profile.company }}"
-        },
-        "url": "{{ site.data.content.site.url }}",
-        "sameAs": ["{{ site.data.content.profile.linkedin_url }}"]
-      }
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "{{ site.data.profile.name }}",
+      "jobTitle": "{{ site.data.profile.job_title }}",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "{{ site.data.profile.company }}"
+      },
+      "url": "{{ site.data.settings.url }}",
+      "sameAs": [
+        "{{ site.data.profile.linkedin_url }}"
+      ]
+    }
     </script>
 
-    {% if site.data.content.site.ga_id %}
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id={{ site.data.content.site.ga_id }}"
-    ></script>
+    {% if site.data.settings.ga_id %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.data.settings.ga_id }}"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-      gtag("config", "{{ site.data.content.site.ga_id }}");
+      gtag("config", "{{ site.data.settings.ga_id }}");
     </script>
     {% endif %}
 
     <script>
       console.log(
         "%c👋 Hello, engineer!",
-        "font-size: 16px; font-weight: bold; color: #3b82f6; font-family: Inter, sans-serif;",
+        "font-size: 16px; font-weight: bold; color: #3b82f6; font-family: Inter, sans-serif;"
       );
       console.log(
-        "%cLooks like you're inspecting the code. If you want to chat about Angular, Flutter, or building resilient front-ends, let's connect: {{ site.data.content.profile.linkedin_url }}",
-        "font-size: 12px; color: #94a3b8; font-family: 'JetBrains Mono', monospace;",
+        "%cLooks like you're inspecting the code. If you want to chat about Angular, Flutter, or building resilient front-ends, let's connect: {{ site.data.profile.linkedin_url }}",
+        "font-size: 12px; color: #94a3b8; font-family: 'JetBrains Mono', monospace;"
       );
     </script>
   </head>
@@ -83,24 +72,23 @@
       <header class="hero">
         <div class="hero__top">
           <img
-            src="{{ site.data.content.profile.avatar }}"
-            alt="{{ site.data.content.profile.name }}"
+            src="{{ site.data.profile.avatar }}"
+            alt="{{ site.data.profile.name }}"
             class="hero__avatar"
             width="64"
             height="64"
           />
           <div>
-            <h1 class="hero__name">{{ site.data.content.profile.name }}</h1>
+            <h1 class="hero__name">{{ site.data.profile.name }}</h1>
             <p class="hero__subtitle">
-              {{ site.data.content.profile.job_title }} · {{
-              site.data.content.profile.company }}
+              {{ site.data.profile.job_title }} · {{ site.data.profile.company }}
             </p>
           </div>
         </div>
-        <p class="hero__bio">{{ site.data.content.profile.bio }}</p>
+        <p class="hero__bio">{{ site.data.profile.bio }}</p>
         <nav class="hero__links" aria-label="Primary links">
           <a
-            href="{{ site.data.content.profile.linkedin_url }}"
+            href="{{ site.data.profile.linkedin_url }}"
             target="_blank"
             rel="noopener noreferrer"
             class="btn btn--primary"
@@ -113,7 +101,7 @@
         <section class="section">
           <h2 class="section__heading">Core Stack &amp; Tools</h2>
           <ul class="tags">
-            {% for tag in site.data.content.stack %}
+            {% for tag in site.data.stack.skills %}
             <li class="tags__item">{{ tag }}</li>
             {% endfor %}
           </ul>
@@ -121,7 +109,7 @@
 
         <section class="section">
           <h2 class="section__heading">Experience</h2>
-          {% for role in site.data.content.experience %}
+          {% for role in site.data.experience %}
           <article class="role">
             <div class="role__header">
               <h3 class="role__company">{{ role.company }}</h3>
@@ -146,7 +134,7 @@
 
         <section class="section">
           <h2 class="section__heading">Interests</h2>
-          <p class="role__summary">{{ site.data.content.interests.summary }}</p>
+          <p class="role__summary">{{ site.data.education.interests }}</p>
         </section>
 
         <section class="section">
@@ -154,23 +142,15 @@
           <div class="details">
             <div>
               <h3 class="details__heading">Education</h3>
-              {% for edu in site.data.content.education %}
-              <p
-                class="details__title{% if forloop.first == false %} details__title--spaced{% endif %}"
-              >
-                {{ edu.institution }}
-              </p>
+              {% for edu in site.data.education.schools %}
+              <p class="details__title{% if forloop.first == false %} details__title--spaced{% endif %}">{{ edu.institution }}</p>
               <p class="details__meta">{{ edu.program }} ({{ edu.period }})</p>
               {% endfor %}
             </div>
             <div>
               <h3 class="details__heading">Languages</h3>
-              {% for lang in site.data.content.languages %}
-              <p
-                class="details__title{% if forloop.first == false %} details__title--spaced{% endif %}"
-              >
-                {{ lang.language }}
-              </p>
+              {% for lang in site.data.education.languages %}
+              <p class="details__title{% if forloop.first == false %} details__title--spaced{% endif %}">{{ lang.language }}</p>
               <p class="details__meta">{{ lang.proficiency }}</p>
               {% endfor %}
             </div>
@@ -179,7 +159,7 @@
       </main>
 
       <footer class="footer">
-        <p>{{ site.data.content.site.copyright }}</p>
+        <p>{{ site.data.settings.copyright }}</p>
       </footer>
     </div>
   </body>

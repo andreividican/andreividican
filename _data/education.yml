@@ -1,0 +1,13 @@
+schools:
+  - institution: Phoenix Institute
+    program: Web Development & Design
+    period: 2013 – 2014
+  - institution: Babeș-Bolyai University
+    program: Tourism Geography
+    period: 2009 – 2012
+languages:
+  - language: English
+    proficiency: Full Professional Proficiency
+  - language: Romanian
+    proficiency: Native / Bilingual
+interests: Passionate about sim racing, playing drums, hiking, and road cycling.
