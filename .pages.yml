@@ -6,7 +6,7 @@ media:
 
 content:
   - name: content
-    label: Portfolio Content
+    label: Andrei Vidican Website Content
     type: file
     path: _data/content.yml
     format: yaml
