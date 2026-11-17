@@ -7,12 +7,19 @@
       date: Sep 2021 — Feb 2024
     - title: Web Developer
       date: Jul 2019 — Sep 2021
-  summary: Currently engineering features across web and mobile within the insurance team at Tide using Flutter and Angular, following a title transition reflecting expanded cross-platform ownership. Previously promoted to Web Engineer II after migrating the marketing website from a LAMP stack to a JAMstack architecture using Contentful alongside another engineer.
+  summary: Building web and mobile features for Tide’s insurance products using
+    Flutter and Angular, owning user flows end-to-end across platforms.
+    Previously led the migration of Tide’s marketing platform from a legacy LAMP
+    stack to a modern JAMstack architecture with Contentful.
 - company: Investoo Group
   period: Aug 2018 — Jul 2019
   title: Front-End Developer · London
-  summary: Primarily worked on in-house plugins for WordPress websites, built custom WordPress themes, and actively participated in the recruitment process.
+  summary: Primarily worked on in-house plugins for WordPress websites, built
+    custom WordPress themes, and actively participated in the recruitment
+    process.
 - company: Contra Agency
   period: Oct 2015 — Aug 2018
   title: Front-End Developer · London
-  summary: Built custom WordPress and Drupal themes from scratch according to design specifications in a fast-paced agency environment, utilizing jQuery, SCSS, and Git.
+  summary: Built custom WordPress and Drupal themes from scratch according to
+    design specifications in a fast-paced agency environment, utilizing jQuery,
+    SCSS, and Git.
