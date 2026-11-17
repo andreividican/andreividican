@@ -5,139 +5,135 @@ media:
     output: img
 
 content:
-  - name: portfolio
-    label: Portfolio
-    type: group
-    content:
-      - name: profile
-        label: Profile & Hero
-        type: file
-        path: _data/profile.yml
-        format: yaml
-        fields:
-          - name: name
-            label: Full Name
-            type: string
-          - name: job_title
-            label: Current Job Title
-            type: string
-          - name: company
-            label: Company Name
-            type: string
-          - name: avatar
-            label: Avatar Image
-            type: image
-          - name: bio
-            label: Bio Summary
-            type: text
-          - name: linkedin_url
-            label: LinkedIn URL
-            type: string
+  - name: profile
+    label: Profile & Hero
+    type: file
+    path: _data/profile.yml
+    format: yaml
+    fields:
+      - name: name
+        label: Full Name
+        type: string
+      - name: job_title
+        label: Current Job Title
+        type: string
+      - name: company
+        label: Company Name
+        type: string
+      - name: avatar
+        label: Avatar Image
+        type: image
+      - name: bio
+        label: Bio Summary
+        type: text
+      - name: linkedin_url
+        label: LinkedIn URL
+        type: string
 
-      - name: experience
-        label: Experience
-        type: file
-        path: _data/experience.yml
-        format: yaml
-        list: true
+  - name: experience
+    label: Experience
+    type: file
+    path: _data/experience.yml
+    format: yaml
+    list: true
+    fields:
+      - name: company
+        label: Company Name
+        type: string
+      - name: period
+        label: Period (e.g. Jul 2019 — Present)
+        type: string
+      - name: title
+        label: Single Title (if no progression)
+        type: string
+      - name: progression
+        label: Role Progression (optional)
+        type: object
+        list:
+          collapsible:
+            summary: "{title} ({date})"
         fields:
-          - name: company
-            label: Company Name
+          - name: title
+            label: Role Title
+            type: string
+          - name: date
+            label: Role Dates
+            type: string
+      - name: summary
+        label: Summary Description
+        type: text
+
+  - name: stack
+    label: Core Stack & Tools
+    type: file
+    path: _data/stack.yml
+    format: yaml
+    fields:
+      - name: skills
+        label: Skills & Technologies
+        type: string
+        list: true
+
+  - name: education
+    label: Education & Interests
+    type: file
+    path: _data/education.yml
+    format: yaml
+    fields:
+      - name: schools
+        label: Education
+        type: object
+        list:
+          collapsible:
+            summary: "{institution} ({period})"
+        fields:
+          - name: institution
+            label: School / University
+            type: string
+          - name: program
+            label: Degree / Program
             type: string
           - name: period
-            label: Period (e.g. Jul 2019 — Present)
+            label: Years
             type: string
-          - name: title
-            label: Single Title (if no progression)
-            type: string
-          - name: progression
-            label: Role Progression (optional)
-            type: object
-            list:
-              collapsible:
-                summary: "{title} ({date})"
-            fields:
-              - name: title
-                label: Role Title
-                type: string
-              - name: date
-                label: Role Dates
-                type: string
-          - name: summary
-            label: Summary Description
-            type: text
-
-      - name: stack
-        label: Core Stack & Tools
-        type: file
-        path: _data/stack.yml
-        format: yaml
+      - name: languages
+        label: Languages
+        type: object
+        list:
+          collapsible:
+            summary: "{language} ({proficiency})"
         fields:
-          - name: skills
-            label: Skills & Technologies
+          - name: language
+            label: Language
             type: string
-            list: true
+          - name: proficiency
+            label: Proficiency Level
+            type: string
+      - name: interests
+        label: Interests Summary
+        type: text
 
-      - name: education
-        label: Education & Interests
-        type: file
-        path: _data/education.yml
-        format: yaml
-        fields:
-          - name: schools
-            label: Education
-            type: object
-            list:
-              collapsible:
-                summary: "{institution} ({period})"
-            fields:
-              - name: institution
-                label: School / University
-                type: string
-              - name: program
-                label: Degree / Program
-                type: string
-              - name: period
-                label: Years
-                type: string
-          - name: languages
-            label: Languages
-            type: object
-            list:
-              collapsible:
-                summary: "{language} ({proficiency})"
-            fields:
-              - name: language
-                label: Language
-                type: string
-              - name: proficiency
-                label: Proficiency Level
-                type: string
-          - name: interests
-            label: Interests Summary
-            type: text
-
-      - name: settings
-        label: SEO & Settings
-        type: file
-        path: _data/settings.yml
-        format: yaml
-        fields:
-          - name: title
-            label: Meta Title
-            type: string
-          - name: description
-            label: Meta Description
-            type: text
-          - name: url
-            label: Canonical Site URL
-            type: string
-          - name: og_image
-            label: Open Graph Image
-            type: image
-          - name: ga_id
-            label: Google Analytics Tag ID
-            type: string
-          - name: copyright
-            label: Footer Copyright Text
-            type: string
+  - name: settings
+    label: SEO & Settings
+    type: file
+    path: _data/settings.yml
+    format: yaml
+    fields:
+      - name: title
+        label: Meta Title
+        type: string
+      - name: description
+        label: Meta Description
+        type: text
+      - name: url
+        label: Canonical Site URL
+        type: string
+      - name: og_image
+        label: Open Graph Image
+        type: image
+      - name: ga_id
+        label: Google Analytics Tag ID
+        type: string
+      - name: copyright
+        label: Footer Copyright Text
+        type: string
